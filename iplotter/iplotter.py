@@ -111,10 +111,10 @@ class PlotlyPlotter(IPlotter):
         '''
 
         self.template = '''
-            <div id={{name}}></div>
+            <div id="chartElement" style="width: 100%; height: 100%"></div>
             <script>
-                var {{name}} = document.getElementById('{{name}}');
-                Plotly.plot({{name}}, {{data}}, {{layout}});
+                var chartElement = document.getElementById('chartElement');
+                Plotly.plot(chartElement, {{data}}, {{layout}});
             </script>
         '''
 
